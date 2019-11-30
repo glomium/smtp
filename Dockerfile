@@ -12,7 +12,7 @@ RUN apk --no-cache add exim libcap && \
     chmod 0755 /usr/sbin/exim && \
     setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/exim
 
-COPY docker/smtp/exim.conf /etc/exim/exim.conf
+COPY exim.conf /etc/exim/exim.conf
 
 USER exim
 EXPOSE 25
